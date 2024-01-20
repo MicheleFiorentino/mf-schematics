@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "custom-lib",
+  "title": "Custom Lib",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the library with its inner component",
+      "type": "string"
+    },
+    "path": {
+      "description": "Where should be created the library",
+      "type": "string",
+      "format": "path",
+      "x-prompt": "Where should the library be created?",
+      "default": "src/app"
+    }
+  },
+  "required": []
+}

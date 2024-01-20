@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "custom-lib": {
+      "description": "generates a custom library with a special DTS",
+      "factory": "./custom-lib/index#customLibGenerator",
+      "schema": "./custom-lib/schema.json",
+      "aliases": []
+    }
+  }
+}
