@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: '<%= dasherize(name) =%>',
-  template: `<p><%= dasherize(name) =%> works!<p>`
+  selector: '<%= dasherize(name) %>',
+  template: `<p><%= dasherize(name) %> works!<p>`
 })
-export class <%= classify(name) =%>Component {
+export class <%= classify(name) %>Component {
   constructor(){}
 }
