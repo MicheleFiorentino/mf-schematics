@@ -1,6 +1,6 @@
 # Schematics Guide for Library Generation
 
-The following guide is just a start-up to generate the first component. The rest is showed in code.
+The following guide is just a start-up to generate the first component. The rest is showed in code. Guide inspired by Angular documentation and "Decoded Frontend" videos.
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
 ## 1. Project Creation
