@@ -1,0 +1,18 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { <%= classify(name) %>Component } from './<%= dasherize(name) %>.component';
+import { MainComponent } from './view/main/main.component';
+
+@NgModule({
+  declarations: [
+    <%= classify(name) %>Component,
+    MainComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  exports: [
+    <%= classify(name) %>Component
+  ]
+})
+export class TestAfModule { }

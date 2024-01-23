@@ -18,6 +18,12 @@
       "description": "The style of the components",
       "type": "string",
       "default": "scss"
+    },
+    "selector": {
+      "description": "What should be the selector",
+      "type": "string",
+      "x-prompt": "What should the selector be?",
+      "default": "mf"
     }
   },
   "required": ["name"]
