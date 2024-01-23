@@ -1,4 +1,5 @@
 export interface CustomLibSchema {
   name: string;
-  path: string;
+  project: string;
+  style: string;
 }
