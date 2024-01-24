@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MaterialDesignModule } from './module/material-design.module';
+import { RoutesModule } from './module/routes.module';
 import { <%= classify(name) %>Component } from './<%= dasherize(name) %>.component';
-import { MainComponent } from './view/main/main.component';
 
 @NgModule({
   declarations: [
-    <%= classify(name) %>Component,
-    MainComponent
+    <%= classify(name) %>Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    MaterialDesignModule,
+    RoutesModule
   ],
   exports: [
     <%= classify(name) %>Component

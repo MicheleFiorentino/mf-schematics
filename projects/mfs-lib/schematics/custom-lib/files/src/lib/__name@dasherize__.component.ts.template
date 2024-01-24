@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
+import { <%= classify(name) %>Service } from './service/<%= dasherize(name) %>.service';
 
 @Component({
   selector: '<%= dasherize(selector) %>-<%= dasherize(name) %>',
-  template: `<p><%= dasherize(name) %> works!<p>`
+    templateUrl: './<%= dasherize(name) %>.component.html',
+    styleUrls: ['./<%= dasherize(name) %>.component.<%= style %>']
 })
 export class <%= classify(name) %>Component {
-  constructor(){}
+  constructor(private service: <%= classify(name) %>Service){}
+
+  ngOnInit(){
+    this.service.resetState();
+  }
 }

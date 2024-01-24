@@ -1,0 +1,9 @@
+/* logic functions can be tested like this ************************
+import { add } from './test.logic';
+
+describe('Test Logic', () => {
+  it('should add two numbers', () => {
+    const result = add(3, 7);
+    expect(result).toBe(10);
+  });
+*******************************************************************/

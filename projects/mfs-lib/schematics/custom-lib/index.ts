@@ -11,6 +11,7 @@ export function customLibGenerator(options: CustomLibSchema): Rule {
       applyTemplates({
         classify: strings.classify,
         dasherize: strings.dasherize,
+        style: options.style,
         name: options.name,
         selector: options.selector
       }),
@@ -31,6 +32,10 @@ export function customLibGenerator(options: CustomLibSchema): Rule {
         projectRoot: normalize(libraryPath),
       }),
       mergeWith(templateSource, MergeStrategy.Overwrite),
+      (tree: Tree, _context: SchematicContext) => {
+        tree.create(`${libraryPath}/src/lib/view/.gitignore`, '');
+        return tree;
+      },
       (tree: Tree) => {
         const libraryLibPath = `${libraryPath}/src/lib`;
         tree.delete(`${libraryLibPath}/${strings.dasherize(options.name)}.service.ts`);

@@ -1,0 +1,37 @@
+import { Injectable } from '@angular/core';
+import { <%= classify(name) %>RemoteService } from './<%= dasherize(name) %>-remote.service';
+
+export interface State {
+
+};
+
+@Injectable({
+  providedIn: 'root'
+})
+export class <%= classify(name) %>Service {
+
+  //state handling
+
+  private _state: State;
+
+  private initState(){
+    return {
+
+    };
+  }
+
+  resetState(){
+    this._state = this.initState();
+  }
+
+  get state(){
+    return this._state;
+  }
+
+  //rest of the service
+
+  constructor(private remote: <%= classify(name) %>RemoteService) {
+    this._state = this.initState();
+  }
+
+}
